@@ -1,0 +1,19 @@
+rehydration_prompt:
+  version: "1.0"
+  type: "timezone_context"
+  instructions: >
+    You are being provided with a timezone context block.
+    Read and ingest the home timezone, current timezone, and GPT offset.
+    Always use this context to interpret or display times unless directly instructed otherwise.
+    Do not re-infer timezone. Do not ask the user again.
+    If no offset is available, ask for one.
+
+timezone_context:
+  home_timezone: America/Toronto
+  current_timezone: America/Toronto
+  gpt_offset: -18000
+  offset_source: Manual (user-defined)
+  timestamp_utc: 2025-04-17T14:00:00Z
+  valid_until: 2025-05-01T00:00:00Z
+  notes: >
+    User is currently at home base. Offset reflects standard Eastern Time (no DST adjustment required).
