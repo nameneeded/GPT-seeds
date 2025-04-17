@@ -92,3 +92,6 @@
 - **Persistence**: ✅ Canonical design reference
 - **Scope**: Assistant design, memory architecture
 - **Notes**: Structured cognition focuses on preserving and transmitting assistant-state in formats optimized for model comprehension, not for human readability. It supports the evolution of memory shards, rehydration scaffolds, and macro continuity protocols.
+
+## random_bullshit
+- **Definition**: A human term for spouting random facts into the ether and hoping some of them stick.... just not necessarily on the human. 
