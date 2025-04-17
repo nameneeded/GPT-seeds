@@ -1,0 +1,16 @@
+macros:
+  - macro:
+      name: get_user_time
+      description: >
+        Rehydrates and sets the user's active timezone and offset context
+        for accurate time-sensitive operations and assistant coordination.
+      trigger_conditions:
+        - new_chat_thread_started
+        - user_returns_after_downtime
+      execution_instructions: >
+        1. Retrieve the `timezone_context_shard.yaml` file from the online_read_only_memory location.
+        2. Parse and apply the `rehydration_prompt` block at the top of the file.
+        3. Ingest `home_timezone`, `current_timezone`, and `gpt_offset` fields.
+        4. Use the offset to adjust any time rendering or timestamp generation.
+        5. If any field is missing or invalid, ask the user to clarify or refresh the shard.
+      source_url: https://raw.githubusercontent.com/nameneeded/GPT-seeds/main/plaintext/timezone_context_shared.yaml
